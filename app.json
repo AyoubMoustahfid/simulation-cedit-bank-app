@@ -1,0 +1,12 @@
+{
+  "name": "simulation-credit-bank-app",
+  "displayName": "simulation-credit-bank-app",
+  "expo": {
+    "name": "simulation-credit-bank-app",
+    "slug": "simulation-credit-bank-app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
