@@ -32,7 +32,7 @@ export default function Register(props) {
              if(data){
                  console.log('dont enregistrer data')
              }
-             props.history.push('/active-account')
+            //  props.history.push('/active-account')
          
         }
       }catch(err){
