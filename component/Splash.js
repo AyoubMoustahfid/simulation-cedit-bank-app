@@ -7,7 +7,7 @@ export default function Splash() {
     const history = useHistory();
 
     setTimeout(() => {
-        history.push('/credit')
+        history.push('/register')
     }, 3000);
 
 
