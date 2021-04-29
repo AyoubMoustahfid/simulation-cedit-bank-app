@@ -9,8 +9,12 @@ export default function Routes() {
     return (
         <NativeRouter>
           <Switch>
-            <Route path="/" exact component={Register} />
+          <Route path="/" exact component={Splash} />
+            <Route path="/register" exact component={Register} />
+            <Route path="/credit" exact component={Credit} />
             <Route path="/active-account" exact component={ActivationAccount} />
+            <Route path="/verification" exact component={Verification} />
+
           </Switch>  
         </NativeRouter>
     )
