@@ -18,29 +18,48 @@ export default function Register(props) {
 
 
     const submitRegister = async () => {
+        
       try {
         if(database){
             database.collection('register').add({
-                nom: lastName,
-                prenom: firstName,
+                lastName: lastName,
+                firstName: firstName,
                 phone: phone,
                 email: email
             })
-
-             const data = await AsyncStorage.setItem('data', JSON.stringify({firstName, lastName, phone, email}))
-
-             if(data){
-                 console.log('dont enregistrer data')
-             }
-             props.history.push('/active-account')
+            const data = await AsyncStorage.setItem('data', JSON.stringify({firstName, lastName, phone, email}))
+            if(data){
+                console.log(data)
+            }
+            props.history.push('/active-account')
          
         }
-      }catch(err){
-          console.log('erdor register');
+      }
+      catch(err){
+          console.log(err);
       }
     }
 
 
+    const load = async () => {
+        try{
+           const data = await AsyncStorage.getItem('data')
+          if(data){
+              console.log('data is exists');
+          }
+
+          const data1 = JSON.parse(data)
+          console.log(data1);
+         
+
+        }catch(err){
+            console.log(err);
+        }
+    }
+    
+    // useEffect(() => {
+    //     load()
+    // }, [])
 
     
     return (
@@ -130,4 +149,3 @@ const styles = StyleSheet.create({
       borderRadius: 3
    },
   });
-  

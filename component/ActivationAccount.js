@@ -45,7 +45,7 @@ export default function ActivationAccount(props) {
                 <View style={{flexDirection: 'row'}}>
                    <View style={{width: 370}}>
                         <TextInput 
-                            value={value.firstName}
+                            value={value.lastName}
                             placeholder="Nom"
                             style={{borderWidth: 1, borderColor: "rgb(240, 240, 240)", paddingHorizontal: 10, paddingVertical: 10}}/>
                    </View>
@@ -62,7 +62,7 @@ export default function ActivationAccount(props) {
             <View style={{flexDirection: 'row'}}>
                <View style={{width: 370}}>
                     <TextInput 
-                        value={value.lastName}
+                        value={value.firstName}
                         placeholder="Nom"
                         style={{borderWidth: 1, borderColor: "rgb(240, 240, 240)", paddingHorizontal: 10, paddingVertical: 10}}/>
                </View>
@@ -79,7 +79,7 @@ export default function ActivationAccount(props) {
         <View style={{flexDirection: 'row'}}>
            <View style={{width: 370}}>
                 <TextInput 
-                    value={value.phone}
+                value={value.phone}
                     placeholder="Nom"
                     style={{borderWidth: 1, borderColor: "rgb(240, 240, 240)", paddingHorizontal: 10, paddingVertical: 10}}/>
            </View>
@@ -111,6 +111,11 @@ export default function ActivationAccount(props) {
        
 <TouchableOpacity style={{flexDirection: 'row',justifyContent: 'center', backgroundColor: '#ee3b45', paddingVertical: 10}}>
      <Text style={{color: 'white'}}>Allon-y !</Text>
+</TouchableOpacity>
+
+<TouchableOpacity style={{flexDirection: 'row',justifyContent: 'center', backgroundColor: '#ee3b45', paddingVertical: 10 , marginVertical: 10}}
+              onPress={() => props.history.push('/')}>
+     <Text style={{color: 'white'}}>Go Home </Text>
 </TouchableOpacity>
 
         </View>
